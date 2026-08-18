@@ -1,16 +1,24 @@
-// Top Offers For You Component - Navigates to Inner Detail Page
+// Top Offers Component with Functional Category Tab Filtering (as per Reference Screenshot)
 import { store } from '../state.js';
 import { mockData } from '../mockData.js';
 
 export function renderOffersRail() {
-  const offers = mockData.topOffers;
+  const activeTab = store.getState().activeOfferTab || 'All Offers';
+  const allOffers = mockData.topOffers;
+
+  const filteredOffers = activeTab === 'All Offers' 
+    ? allOffers 
+    : allOffers.filter(o => o.category.toLowerCase() === activeTab.toLowerCase());
+
+  const categories = ['All Offers', 'Shopping', 'Electronics', 'Travel', 'Dining'];
 
   return `
     <section id="offers" class="py-12 sm:py-16 bg-wf-bg border-b border-wf-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <!-- Header Controls -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <!-- Header Controls & Functional Category Tabs (input_file_2.png) -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          
           <div class="space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-wf-muted border border-wf-border text-wf-dark text-xs font-bold uppercase tracking-wider">
               <i data-lucide="tag" class="w-3.5 h-3.5"></i>
@@ -23,13 +31,30 @@ export function renderOffersRail() {
               Exclusive discount vouchers on leading brands for Poonawalla Fincorp customers.
             </p>
           </div>
+
+          <!-- Category Filtering Tabs (Exact Layout from attached screenshot) -->
+          <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
+            ${categories.map(cat => `
+              <button 
+                data-offer-tab="${cat}"
+                class="btn-offer-tab px-4 py-2 rounded-full font-bold text-xs whitespace-nowrap transition-all ${
+                  activeTab === cat 
+                    ? 'bg-wf-dark text-white shadow-xs' 
+                    : 'bg-white hover:bg-wf-muted text-wf-dark border border-wf-border'
+                }"
+              >
+                ${cat}
+              </button>
+            `).join('')}
+          </div>
+
         </div>
 
-        <!-- Rail / Grid -->
-        <div class="flex md:grid md:grid-cols-3 gap-5 sm:gap-6 overflow-x-auto hide-scrollbar snap-x snap-mandatory py-2 -mx-4 px-4 md:mx-0 md:px-0">
+        <!-- Offers Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          ${offers.map(offer => `
-            <div class="snap-start flex-shrink-0 w-72 sm:w-80 md:w-auto rounded-2xl bg-white border border-wf-border p-5 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+          ${filteredOffers.length > 0 ? filteredOffers.map(offer => `
+            <div class="rounded-2xl bg-white border-2 border-wf-border p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
               
               <div class="space-y-4">
                 
@@ -49,7 +74,7 @@ export function renderOffersRail() {
                   </span>
                 </div>
 
-                <div class="space-y-1">
+                <div class="space-y-1 text-left">
                   <h3 class="font-outfit font-bold text-lg text-wf-dark group-hover:text-wf-subtext transition-colors leading-snug">
                     ${offer.title}
                   </h3>
@@ -60,7 +85,7 @@ export function renderOffersRail() {
 
               </div>
 
-              <!-- Action Footnote & CTA (Navigates to Inner Detail Page) -->
+              <!-- Action Footnote & CTA -->
               <div class="pt-5 border-t border-wf-border flex items-center justify-between gap-3 mt-4">
                 <div class="text-[11px] text-wf-subtext flex items-center gap-1">
                   <i data-lucide="clock" class="w-3.5 h-3.5"></i>
@@ -77,7 +102,11 @@ export function renderOffersRail() {
               </div>
 
             </div>
-          `).join('')}
+          `).join('') : `
+            <div class="col-span-full py-12 text-center bg-white rounded-2xl border border-wf-border p-6 text-wf-subtext text-sm">
+              No offers found in category "${activeTab}". Select another tab above.
+            </div>
+          `}
 
         </div>
 
@@ -87,5 +116,11 @@ export function renderOffersRail() {
 }
 
 export function bindOffersEvents() {
-  // Handled by router links #offer-detail/:id
+  document.querySelectorAll('.btn-offer-tab').forEach(tabBtn => {
+    tabBtn.addEventListener('click', (e) => {
+      const selectedTab = e.currentTarget.getAttribute('data-offer-tab');
+      store.state.activeOfferTab = selectedTab;
+      store.notify();
+    });
+  });
 }
