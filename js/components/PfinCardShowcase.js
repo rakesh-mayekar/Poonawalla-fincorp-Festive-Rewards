@@ -1,111 +1,75 @@
-// PFIN Card Showcase Component - Wireframe Theme
+// PFIN Card Showcase Component - Minimalist UI Protocol Edition
 import { store } from '../state.js';
 
 export function renderPfinCardShowcase() {
   return `
-    <section id="pfin-card" class="py-12 sm:py-16 bg-wf-bg border-b border-wf-border">
+    <section id="pfin-card" class="py-16 sm:py-24 bg-wf-bg border-b border-wf-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- PFIN Card Showcase Banner Box -->
-        <div class="relative rounded-3xl bg-white text-wf-text p-6 sm:p-8 lg:p-12 shadow-md border-2 border-wf-border overflow-hidden">
+        <div class="rounded-xl bg-wf-dark text-white p-8 sm:p-12 shadow-md relative overflow-hidden">
           
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             
-            <!-- Left Side: Card Specs & Bullet Highlights -->
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-              
-              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-wf-muted border border-wf-border text-wf-dark text-xs font-semibold uppercase tracking-wider">
+            <div class="lg:col-span-7 space-y-5 text-left">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/10 text-white font-mono text-xs font-bold uppercase tracking-wider">
                 <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
-                <span>Next-Gen Digital Credit Card</span>
+                <span>Digital Financial Product</span>
               </div>
 
-              <h2 class="font-outfit text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-wf-dark">
-                Meet the New <span class="text-wf-subtext">PFIN Card</span>
+              <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
+                Digital Credit Card <span class="text-zinc-400 italic font-normal">Sanction</span>
               </h2>
 
-              <p class="text-wf-subtext text-sm sm:text-base max-w-xl mx-auto lg:mx-0">
-                Experience seamless payments, instant digital issuance, and unlimited 5% festive cashback across top retail, dining, and travel brand partners.
+              <p class="text-zinc-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl">
+                Get 100% digital instant virtual card generation with zero joining fee and 5% festive rewards across top brand outlets.
               </p>
 
-              <!-- Feature Bullet Points -->
-              <div class="space-y-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
-                <div class="flex items-center gap-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <span class="font-semibold text-sm text-wf-dark">100% Digital & Instant Sanction in 60 Seconds</span>
+              <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg border-t border-zinc-800">
+                <div>
+                  <div class="font-mono font-bold text-sm text-white">₹ 2,00,000</div>
+                  <div class="text-[10px] text-zinc-400 uppercase font-mono">Credit Limit</div>
                 </div>
-
-                <div class="flex items-center gap-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <span class="font-semibold text-sm text-wf-dark">Up to 5% Unlimited Festive Cashback on Brand Spends</span>
+                <div>
+                  <div class="font-mono font-bold text-sm text-white">₹ 0</div>
+                  <div class="text-[10px] text-zinc-400 uppercase font-mono">Joining Fee</div>
                 </div>
-
-                <div class="flex items-center gap-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <span class="font-semibold text-sm text-wf-dark">Zero Joining Fee & Free Airport Lounge Access</span>
+                <div>
+                  <div class="font-mono font-bold text-sm text-white">5%</div>
+                  <div class="text-[10px] text-zinc-400 uppercase font-mono">Festive Cashback</div>
                 </div>
               </div>
 
-              <!-- CTA Button -->
-              <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <button 
-                  id="btn-apply-pfin-card"
-                  class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-base shadow-xs active:scale-98 transition-all flex items-center justify-center gap-2 group"
+              <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <a 
+                  href="#pfin-card-detail"
+                  class="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-wf-dark font-semibold text-xs sm:text-sm hover:bg-zinc-100 transition-all flex items-center justify-center gap-2"
                 >
-                  <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
-                  <span>Apply for PFIN Card</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                </button>
-                <span class="text-xs text-wf-subtext">No physical documentation required</span>
-              </div>
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                  <span>View Details</span>
+                </a>
 
+                <a 
+                  href="#pfin-card-detail"
+                  class="w-full sm:w-auto px-6 py-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
+                >
+                  <i data-lucide="zap" class="w-4 h-4 text-white"></i>
+                  <span>Apply for PFIN Card</span>
+                </a>
+              </div>
             </div>
 
-            <!-- Right Side: Wireframe 3D Digital Card -->
             <div class="lg:col-span-5 flex justify-center">
-              
-              <div class="relative w-72 h-44 sm:w-84 sm:h-52 lg:w-96 lg:h-60 rounded-2xl bg-wf-dark text-white border-2 border-wf-dark shadow-2xl p-5 flex flex-col justify-between overflow-hidden animate-float group cursor-pointer">
-                
-                <!-- Top Row: Card Brand Logo & Chip -->
+              <div class="w-72 h-44 sm:w-80 sm:h-48 rounded-xl bg-zinc-900 border border-zinc-700 p-6 flex flex-col justify-between shadow-2xl">
                 <div class="flex justify-between items-start">
-                  <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-white text-wf-dark font-extrabold text-xs flex items-center justify-center font-outfit">
-                      PFIN
-                    </div>
-                    <span class="font-outfit font-extrabold text-white text-sm tracking-wider">POONAWALLA</span>
-                  </div>
-                  <!-- EMV Chip -->
-                  <div class="w-10 h-8 rounded-md bg-zinc-700 border border-zinc-500 flex items-center justify-center">
-                    <div class="w-6 h-5 border border-zinc-400 rounded-xs"></div>
-                  </div>
+                  <span class="font-mono font-bold text-xs tracking-widest text-zinc-300">POONAWALLA PFIN</span>
+                  <div class="w-8 h-6 rounded bg-zinc-800 border border-zinc-700"></div>
                 </div>
-
-                <!-- Card Number preview -->
-                <div class="space-y-1 my-2">
-                  <div class="font-mono text-sm sm:text-base lg:text-lg text-zinc-300 tracking-widest font-semibold">
-                    •••• •••• •••• 8842
-                  </div>
+                <div class="font-mono text-base tracking-widest text-zinc-300">•••• •••• •••• 8842</div>
+                <div class="flex justify-between text-[11px] font-mono text-zinc-400">
+                  <span>VALUED CUSTOMER</span>
+                  <span>10/30</span>
                 </div>
-
-                <!-- Cardholder Name & Expiry -->
-                <div class="flex justify-between items-end border-t border-zinc-700 pt-2">
-                  <div>
-                    <div class="text-[9px] text-zinc-400 uppercase tracking-wider">Cardholder</div>
-                    <div class="font-outfit text-xs sm:text-sm font-bold text-white uppercase tracking-wide">FESTIVE MEMBER</div>
-                  </div>
-                  <div class="text-right">
-                    <div class="text-[9px] text-zinc-400 uppercase tracking-wider">VALID THRU</div>
-                    <div class="font-mono text-xs text-zinc-300 font-bold">10/30</div>
-                  </div>
-                </div>
-
               </div>
-
             </div>
 
           </div>
@@ -118,12 +82,5 @@ export function renderPfinCardShowcase() {
 }
 
 export function bindPfinCardEvents() {
-  const btnApply = document.getElementById('btn-apply-pfin-card');
-  if (btnApply) {
-    btnApply.addEventListener('click', () => {
-      store.requireAuth(() => {
-        store.openModal('pfin-apply');
-      });
-    });
-  }
+  // Handled by router links #pfin-card-detail
 }

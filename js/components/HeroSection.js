@@ -1,4 +1,4 @@
-// Master Hero Section Component with Exactly 4-Digit OTP Grid
+// Master Hero Section Component - Minimalist UI Protocol Edition
 import { store } from '../state.js';
 
 export function renderHeroSection() {
@@ -19,39 +19,38 @@ export function renderHeroSection() {
           <!-- Left Column: Headline & Value Propositions -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-wf-border text-wf-dark text-xs sm:text-sm font-semibold shadow-xs">
-              <span class="w-2 h-2 rounded-full bg-wf-dark animate-ping"></span>
-              <span>Poonawalla Fincorp Master Section</span>
-              <i data-lucide="sparkles" class="w-4 h-4 text-wf-dark"></i>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-wf-muted border border-wf-border text-wf-dark text-xs font-mono tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-wf-dark"></span>
+              <span>POONAWALLA FINCORP MASTER SECTION</span>
             </div>
 
-            <!-- Main Headline -->
-            <h1 class="font-outfit text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-wf-dark leading-none">
+            <!-- Main Editorial Serif Headline (minimalist-ui spec) -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-wf-dark leading-[1.08]">
               Welcome to the <br />
-              <span class="text-wf-subtext">Festive Rewards Hub</span>
+              <span class="text-wf-subtext italic font-normal">Festive Rewards Hub</span>
             </h1>
 
             <!-- Subtitle -->
             <p class="text-wf-subtext text-sm sm:text-base md:text-lg font-normal max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Celebrate this festive season with instant pre-approved loans, zero processing fees, and guaranteed brand gift vouchers! Play games to unlock exciting festive rewards.
+              Celebrate this festive season with instant pre-approved loans, zero processing fees, and guaranteed brand gift vouchers. Play games to unlock verified festive rewards.
             </p>
 
             <!-- Dual Action CTAs -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
               <a 
                 href="#play-win"
-                class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-xs active:scale-98 transition-all group"
+                class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-wf-dark hover:bg-wf-darkHover text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 active:scale-98 transition-all group"
               >
-                <i data-lucide="gamepad-2" class="w-5 h-5 text-white"></i>
+                <i data-lucide="gamepad-2" class="w-4 h-4 text-white"></i>
                 <span>Play & Win Rewards</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform"></i>
               </a>
 
               <a 
                 href="#preapproved"
-                class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white hover:bg-wf-muted border border-wf-border text-wf-dark font-bold text-sm sm:text-base flex items-center justify-center gap-2 active:scale-98 transition-all"
+                class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-white hover:bg-wf-muted border border-wf-border text-wf-dark font-semibold text-sm sm:text-base flex items-center justify-center gap-2 active:scale-98 transition-all"
               >
-                <i data-lucide="sparkles" class="w-5 h-5 text-wf-dark"></i>
+                <i data-lucide="sparkles" class="w-4 h-4 text-wf-dark"></i>
                 <span>Check Pre-Approved Loan</span>
               </a>
             </div>
@@ -59,31 +58,31 @@ export function renderHeroSection() {
             <!-- Trust Badges Bar -->
             <div class="pt-4 grid grid-cols-3 gap-3 sm:gap-4 text-left border-t border-wf-border max-w-xl mx-auto lg:mx-0">
               <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-lg bg-wf-muted border border-wf-border flex items-center justify-center text-wf-dark flex-shrink-0">
+                <div class="w-8 h-8 rounded-md bg-wf-muted border border-wf-border flex items-center justify-center text-wf-dark flex-shrink-0">
                   <i data-lucide="clock" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="font-bold text-xs sm:text-sm text-wf-dark leading-tight">24/7 Dedicated</div>
+                  <div class="font-semibold text-xs sm:text-sm text-wf-dark leading-tight">24/7 Dedicated</div>
                   <div class="text-[10px] sm:text-xs text-wf-subtext">Loan Team</div>
                 </div>
               </div>
 
               <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-lg bg-wf-muted border border-wf-border flex items-center justify-center text-wf-dark flex-shrink-0">
+                <div class="w-8 h-8 rounded-md bg-wf-muted border border-wf-border flex items-center justify-center text-wf-dark flex-shrink-0">
                   <i data-lucide="percent" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="font-bold text-xs sm:text-sm text-wf-dark leading-tight">Low Rates</div>
+                  <div class="font-semibold text-xs sm:text-sm text-wf-dark leading-tight">Low Rates</div>
                   <div class="text-[10px] sm:text-xs text-wf-subtext">From 9.99%</div>
                 </div>
               </div>
 
               <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-lg bg-wf-muted border border-wf-border flex items-center justify-center text-wf-dark flex-shrink-0">
-                  <i data-lucide="gift" class="w-4 h-4"></i>
+                <div class="w-8 h-8 rounded-md bg-wf-muted border border-wf-border flex items-center justify-center text-wf-dark flex-shrink-0">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="font-bold text-xs sm:text-sm text-wf-dark leading-tight">100% Win</div>
+                  <div class="font-semibold text-xs sm:text-sm text-wf-dark leading-tight">100% Win</div>
                   <div class="text-[10px] sm:text-xs text-wf-subtext">Guaranteed</div>
                 </div>
               </div>
@@ -91,36 +90,36 @@ export function renderHeroSection() {
 
           </div>
 
-          <!-- Right Column: 24/7 Instant Sanction Card (Enlarged Height & Prominent Size) -->
+          <!-- Right Column: 24/7 Instant Sanction Card (Bento Box Spec) -->
           <div class="lg:col-span-5">
             
-            <div class="relative rounded-3xl bg-white border-2 border-wf-border p-6 sm:p-7 shadow-lg text-wf-text space-y-5 min-h-[530px] flex flex-col justify-between">
+            <div class="relative rounded-xl bg-white border border-wf-border p-6 sm:p-7 text-wf-text space-y-5 min-h-[530px] flex flex-col justify-between">
               
               <!-- Card Header -->
               <div class="border-b border-wf-border pb-3.5 flex items-center justify-between flex-shrink-0">
                 <div class="flex items-center gap-3">
-                  <div class="w-11 h-11 rounded-xl bg-wf-dark text-white flex items-center justify-center font-bold">
+                  <div class="w-10 h-10 rounded-lg bg-wf-dark text-white flex items-center justify-center font-bold">
                     <i data-lucide="shield-check" class="w-5 h-5"></i>
                   </div>
                   <div>
-                    <h3 class="font-outfit font-extrabold text-lg sm:text-xl text-wf-dark leading-tight">24/7 Instant Sanction</h3>
+                    <h3 class="font-sans font-bold text-lg text-wf-dark leading-tight">24/7 Instant Sanction</h3>
                     <p class="text-xs text-wf-subtext mt-0.5">Dedicated Loan Desk Available Round the Clock</p>
                   </div>
                 </div>
-                <span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-900 font-mono text-[11px] font-bold border border-emerald-300">
+                <span class="px-2.5 py-1 rounded bg-wf-pastelGreen text-wf-pastelGreenText font-mono text-[11px] font-bold border border-emerald-200">
                   24/7 ACTIVE
                 </span>
               </div>
 
               ${step === 1 ? `
-                <!-- Step 1: Sliders Form (Amount, Interest Rate, Tenure) -->
+                <!-- Step 1: Sliders Form -->
                 <div class="space-y-4 flex-1 flex flex-col justify-between py-1">
                   
                   <!-- Slider 1: Loan Amount -->
                   <div class="space-y-1.5">
                     <div class="flex justify-between text-xs sm:text-sm">
-                      <span class="text-wf-subtext font-semibold">Loan Amount</span>
-                      <span id="hero-amount-val" class="font-outfit font-extrabold text-wf-dark text-base">₹ ${calc.amount.toLocaleString('en-IN')}</span>
+                      <span class="text-wf-subtext font-medium">Loan Amount</span>
+                      <span id="hero-amount-val" class="font-mono font-bold text-wf-dark text-base">₹ ${calc.amount.toLocaleString('en-IN')}</span>
                     </div>
                     <input 
                       type="range" 
@@ -140,8 +139,8 @@ export function renderHeroSection() {
                   <!-- Slider 2: Interest Rate -->
                   <div class="space-y-1.5">
                     <div class="flex justify-between text-xs sm:text-sm">
-                      <span class="text-wf-subtext font-semibold">Interest Rate (% p.a.)</span>
-                      <span id="hero-rate-val" class="font-outfit font-extrabold text-wf-dark text-base">${calc.rate}% p.a.</span>
+                      <span class="text-wf-subtext font-medium">Interest Rate (% p.a.)</span>
+                      <span id="hero-rate-val" class="font-mono font-bold text-wf-dark text-base">${calc.rate}% p.a.</span>
                     </div>
                     <input 
                       type="range" 
@@ -161,8 +160,8 @@ export function renderHeroSection() {
                   <!-- Slider 3: Tenure -->
                   <div class="space-y-1.5">
                     <div class="flex justify-between text-xs sm:text-sm">
-                      <span class="text-wf-subtext font-semibold">Tenure (Months)</span>
-                      <span id="hero-tenure-val" class="font-outfit font-extrabold text-wf-dark text-base">${calc.tenure} Months</span>
+                      <span class="text-wf-subtext font-medium">Tenure (Months)</span>
+                      <span id="hero-tenure-val" class="font-mono font-bold text-wf-dark text-base">${calc.tenure} Months</span>
                     </div>
                     <input 
                       type="range" 
@@ -179,12 +178,12 @@ export function renderHeroSection() {
                     </div>
                   </div>
 
-                  <!-- Calculated EMI Box & Calculate & Apply Button -->
-                  <div class="rounded-2xl bg-wf-muted border border-wf-border p-4 space-y-3 mt-2">
+                  <!-- Calculated EMI Box & Button -->
+                  <div class="rounded-lg bg-wf-muted border border-wf-border p-4 space-y-3 mt-2">
                     <div class="flex items-center justify-between">
                       <div>
-                        <div class="text-[10px] text-wf-subtext font-bold uppercase tracking-wider">Estimated Monthly EMI</div>
-                        <div id="hero-calculated-emi" class="font-outfit font-black text-2xl text-wf-dark mt-0.5">
+                        <div class="text-[10px] text-wf-subtext font-bold uppercase tracking-wider font-mono">Estimated Monthly EMI</div>
+                        <div id="hero-calculated-emi" class="font-mono font-bold text-2xl text-wf-dark mt-0.5">
                           ₹ ${calc.emi.toLocaleString('en-IN')} / mo
                         </div>
                       </div>
@@ -192,7 +191,7 @@ export function renderHeroSection() {
 
                     <button 
                       id="btn-hero-calculate-apply"
-                      class="w-full py-3.5 px-5 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 active:scale-98 transition-all shadow-xs"
+                      class="w-full py-3.5 px-5 rounded-lg bg-wf-dark hover:bg-wf-darkHover text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 active:scale-98 transition-all"
                     >
                       <span>Calculate & Apply</span>
                       <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
@@ -204,35 +203,35 @@ export function renderHeroSection() {
                 <!-- Step 2: Inline Summary + Back Button + 2-Stage Mobile OTP -->
                 <div class="space-y-4 flex-1 flex flex-col justify-between py-1 animate-fade-in text-left">
                   
-                  <!-- Header with Explicit Back Button -->
+                  <!-- Header with Back Button -->
                   <div class="flex items-center justify-between border-b border-wf-border pb-2">
                     <button 
                       id="btn-hero-edit-summary" 
-                      class="inline-flex items-center gap-1.5 text-xs font-bold text-wf-dark hover:text-wf-subtext bg-wf-muted hover:bg-zinc-200 px-3 py-1.5 rounded-lg border border-wf-border transition-colors"
+                      class="inline-flex items-center gap-1.5 text-xs font-semibold text-wf-dark hover:text-wf-subtext bg-wf-muted px-3 py-1.5 rounded border border-wf-border transition-colors"
                     >
                       <i data-lucide="arrow-left" class="w-4 h-4"></i>
                       <span>Back</span>
                     </button>
-                    <span class="text-xs font-bold text-wf-dark">Filled Loan Summary</span>
+                    <span class="text-xs font-semibold text-wf-dark">Filled Loan Summary</span>
                   </div>
 
                   <!-- Loan Summary Table -->
-                  <div class="p-4 rounded-xl bg-wf-muted border border-wf-border space-y-2">
+                  <div class="p-4 rounded-lg bg-wf-muted border border-wf-border space-y-2">
                     <div class="grid grid-cols-2 gap-3 text-xs">
                       <div>
-                        <span class="text-[10px] text-wf-subtext block uppercase font-bold">Loan Amount</span>
+                        <span class="text-[10px] text-wf-subtext block uppercase font-mono font-bold">Loan Amount</span>
                         <strong class="text-wf-dark font-mono font-bold text-sm">₹ ${calc.amount.toLocaleString('en-IN')}</strong>
                       </div>
                       <div>
-                        <span class="text-[10px] text-wf-subtext block uppercase font-bold">Tenure & Rate</span>
+                        <span class="text-[10px] text-wf-subtext block uppercase font-mono font-bold">Tenure & Rate</span>
                         <strong class="text-wf-dark font-mono font-bold text-sm">${calc.tenure} Mos @ ${calc.rate}%</strong>
                       </div>
                       <div>
-                        <span class="text-[10px] text-wf-subtext block uppercase font-bold">Monthly EMI</span>
-                        <strong class="text-emerald-700 font-mono font-extrabold text-sm">₹ ${calc.emi.toLocaleString('en-IN')} / mo</strong>
+                        <span class="text-[10px] text-wf-subtext block uppercase font-mono font-bold">Monthly EMI</span>
+                        <strong class="text-wf-dark font-mono font-bold text-sm">₹ ${calc.emi.toLocaleString('en-IN')} / mo</strong>
                       </div>
                       <div>
-                        <span class="text-[10px] text-wf-subtext block uppercase font-bold">Total Payable</span>
+                        <span class="text-[10px] text-wf-subtext block uppercase font-mono font-bold">Total Payable</span>
                         <strong class="text-wf-dark font-mono font-bold text-sm">₹ ${calc.totalPayable.toLocaleString('en-IN')}</strong>
                       </div>
                     </div>
@@ -242,10 +241,10 @@ export function renderHeroSection() {
                   <form id="hero-inline-otp-form" class="space-y-3">
                     
                     <div class="space-y-1">
-                      <label class="block text-xs font-bold uppercase text-wf-dark">Mobile Number for Verification</label>
+                      <label class="block text-xs font-semibold uppercase text-wf-dark font-mono">Mobile Number for Verification</label>
                       <div class="flex gap-2">
                         <div class="relative flex-1 flex items-center">
-                          <span class="absolute left-3 text-xs font-bold text-wf-subtext">+91</span>
+                          <span class="absolute left-3 text-xs font-mono font-bold text-wf-subtext">+91</span>
                           <input 
                             type="tel" 
                             id="hero-inline-mobile" 
@@ -253,13 +252,13 @@ export function renderHeroSection() {
                             maxlength="10" 
                             placeholder="98765 43210" 
                             value="${userMobile || '9876543210'}"
-                            class="w-full pl-11 pr-2 py-2.5 rounded-xl border border-wf-border font-mono text-xs sm:text-sm font-semibold text-wf-dark outline-none focus:border-wf-dark"
+                            class="w-full pl-11 pr-2 py-2.5 rounded-lg border border-wf-border font-mono text-xs sm:text-sm font-semibold text-wf-dark outline-none focus:border-wf-dark"
                           />
                         </div>
                         <button 
                           type="button" 
                           id="btn-hero-send-otp" 
-                          class="px-4 py-2.5 rounded-xl ${otpSent ? 'bg-emerald-600 text-white' : 'bg-wf-dark hover:bg-wf-darkHover text-white'} font-bold text-xs flex-shrink-0 transition-colors"
+                          class="px-4 py-2.5 rounded-lg ${otpSent ? 'bg-wf-pastelGreen text-wf-pastelGreenText border border-emerald-300' : 'bg-wf-dark hover:bg-wf-darkHover text-white'} font-semibold text-xs flex-shrink-0 transition-colors"
                         >
                           ${otpSent ? '✓ Sent' : 'Send OTP'}
                         </button>
@@ -269,14 +268,14 @@ export function renderHeroSection() {
                     <!-- Exactly 4 OTP Input Boxes -->
                     <div class="space-y-1 ${otpSent ? 'opacity-100' : 'opacity-50 pointer-events-none'} transition-opacity">
                       <div class="flex justify-between items-center">
-                        <label class="block text-[11px] font-bold uppercase text-wf-dark">Enter 4-Digit OTP</label>
-                        <span class="text-[10px] font-bold text-emerald-700">${otpSent ? 'Auto-filled (1234)' : 'Click Send OTP'}</span>
+                        <label class="block text-[11px] font-semibold uppercase text-wf-dark font-mono">Enter 4-Digit OTP</label>
+                        <span class="text-[10px] font-mono text-wf-pastelGreenText font-bold">${otpSent ? 'Auto-filled (1234)' : 'Click Send OTP'}</span>
                       </div>
                       <div class="grid grid-cols-4 gap-2">
-                        <input type="text" value="${otpSent ? '1' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
-                        <input type="text" value="${otpSent ? '2' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
-                        <input type="text" value="${otpSent ? '3' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
-                        <input type="text" value="${otpSent ? '4' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
+                        <input type="text" value="${otpSent ? '1' : ''}" readonly class="py-2 rounded bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
+                        <input type="text" value="${otpSent ? '2' : ''}" readonly class="py-2 rounded bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
+                        <input type="text" value="${otpSent ? '3' : ''}" readonly class="py-2 rounded bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
+                        <input type="text" value="${otpSent ? '4' : ''}" readonly class="py-2 rounded bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
                       </div>
                     </div>
 
@@ -285,7 +284,7 @@ export function renderHeroSection() {
                       type="submit"
                       id="btn-hero-submit-app"
                       ${otpSent ? '' : 'disabled'}
-                      class="w-full py-3 px-4 rounded-xl ${otpSent ? 'bg-wf-dark hover:bg-wf-darkHover text-white cursor-pointer' : 'bg-zinc-300 text-zinc-500 cursor-not-allowed'} font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-all"
+                      class="w-full py-3 px-4 rounded-lg ${otpSent ? 'bg-wf-dark hover:bg-wf-darkHover text-white cursor-pointer' : 'bg-zinc-200 text-zinc-400 cursor-not-allowed'} font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all"
                     >
                       <i data-lucide="check-circle" class="w-4 h-4"></i>
                       <span>Verify & Submit Application</span>
@@ -296,7 +295,7 @@ export function renderHeroSection() {
               `}
 
               <div class="text-[11px] text-wf-subtext text-center flex items-center justify-center gap-1.5 pt-2 border-t border-wf-border flex-shrink-0">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                <i data-lucide="shield-check" class="w-4 h-4 text-wf-dark"></i>
                 <span>Direct submission to 24/7 dedicated loan desk.</span>
               </div>
 
@@ -308,27 +307,22 @@ export function renderHeroSection() {
 
       </div>
 
-      <!-- BOTTOM BANNER DIYA TICKER -->
-      <div class="w-full bg-white border-t-2 border-wf-border py-3 px-4 shadow-xs relative z-20 flex-shrink-0">
+      <!-- BOTTOM BANNER TICKER (No emojis as per minimalist-ui rule) -->
+      <div class="w-full bg-white border-t border-wf-border py-3 px-4 relative z-20 flex-shrink-0">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-3 text-center sm:text-left">
           
-          <div class="flex items-center gap-3">
-            <div class="w-7 h-7 flex items-center justify-center text-wf-dark">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C10.5 4.5 9 6.5 9 9C9 10.66 10.34 12 12 12C13.66 12 15 10.66 15 9C15 6.5 13.5 4.5 12 2Z" fill="#27272A" />
-                <path d="M4 14C4 17.31 7.58 20 12 20C16.42 20 20 17.31 20 14C20 13.5 4.5 13 4 14Z" fill="#71717A" />
-              </svg>
-            </div>
-            <div class="font-outfit font-extrabold text-xs sm:text-sm text-wf-dark tracking-wide uppercase">
-              ✨ Shubh Diwali & Festive Offers 🪔
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-4 h-4 text-wf-dark"></i>
+            <div class="font-mono text-xs sm:text-sm text-wf-dark tracking-wide uppercase font-bold">
+              Shubh Diwali & Festive Offers
             </div>
           </div>
 
           <div class="flex items-center gap-3 text-xs font-semibold text-wf-subtext">
-            <span class="px-2.5 py-1 rounded bg-wf-muted text-wf-dark border border-wf-border font-bold text-xs">
+            <span class="px-2.5 py-1 rounded bg-wf-pastelYellow text-wf-pastelYellowText border border-amber-200 font-mono text-xs font-bold">
               Guaranteed Brand Rewards
             </span>
-            <span class="hidden md:inline text-xs">
+            <span class="hidden md:inline text-xs font-mono">
               • Zero Processing Fee on Pre-Approved Loans •
             </span>
           </div>

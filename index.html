@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Poonawalla Fincorp - Festive Rewards & Offers Hub (Wireframe Edition)</title>
-  <meta name="description" content="Explore Poonawalla Fincorp's Festive Rewards Hub wireframe prototype featuring Quick Loans, Play & Win games, Pre-approved loans, and partner vouchers.">
-  <meta name="theme-color" content="#18181B">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poonawalla Fincorp - Festive Rewards & Offers Hub</title>
+  
+  <!-- Meta Descriptions for SEO -->
+  <meta name="description" content="Explore Poonawalla Fincorp's Festive Rewards Hub. Instant pre-approved loans, digital credit cards, mini-games, and partner brand vouchers." />
+  <meta name="theme-color" content="#111111" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <!-- Google Fonts: Editorial Serif (Playfair Display / Newsreader) & Clean Sans (Geist / SF Pro Fallback) & Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600;800&family=Geist:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -21,44 +29,41 @@
         extend: {
           colors: {
             wf: {
-              bg: '#F8F9FA',
+              bg: '#FBFBFA',
               surface: '#FFFFFF',
               card: '#FFFFFF',
-              border: '#E4E4E7',
-              borderDark: '#D4D4D8',
-              dark: '#18181B',
-              darkHover: '#27272A',
+              border: '#EAEAEA',
+              dark: '#111111',
+              darkHover: '#2A2A2A',
               muted: '#F4F4F5',
-              mutedHover: '#E4E4E7',
-              text: '#09090B',
-              subtext: '#71717A',
-              accent: '#3F3F46'
+              subtext: '#787774',
+              text: '#111111',
+              // Muted Pastels (minimalist-ui spec)
+              pastelRed: '#FDEBEC',
+              pastelRedText: '#9F2F2D',
+              pastelBlue: '#E1F3FE',
+              pastelBlueText: '#1F6C9F',
+              pastelGreen: '#EDF3EC',
+              pastelGreenText: '#346538',
+              pastelYellow: '#FBF3DB',
+              pastelYellowText: '#956400'
             }
           },
           fontFamily: {
-            outfit: ['Outfit', 'sans-serif'],
-            sans: ['Plus Jakarta Sans', 'sans-serif']
+            sans: ['Geist', 'SF Pro Display', 'Helvetica Neue', 'sans-serif'],
+            serif: ['Playfair Display', 'Newsreader', 'serif'],
+            mono: ['Geist Mono', 'SF Mono', 'monospace'],
+            outfit: ['Geist', 'SF Pro Display', 'sans-serif']
           }
         }
       }
     }
   </script>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Canvas Confetti Library -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
-<body class="bg-wf-bg text-wf-text font-sans antialiased selection:bg-wf-dark selection:text-white overflow-x-hidden">
-
-  <!-- Main Web App Mounting Container -->
-  <div id="app" class="min-h-screen flex flex-col relative"></div>
-
-  <!-- JavaScript Main Script -->
-  <script type="module" src="js/app.js"></script>
+<body class="bg-wf-bg text-wf-text antialiased font-sans selection:bg-wf-dark selection:text-white min-h-screen flex flex-col">
+  <div id="app" class="flex-1 flex flex-col"></div>
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>
