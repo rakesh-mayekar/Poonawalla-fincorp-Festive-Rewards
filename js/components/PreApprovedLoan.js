@@ -1,4 +1,4 @@
-// Pre-Approved Loan Section Component - Single Line Horizontal Grid Alignment
+// Pre-Approved Loan Section Component - Matching Reference Wireframe Layout
 import { store } from '../state.js';
 
 export function renderPreApprovedLoan() {
@@ -9,81 +9,100 @@ export function renderPreApprovedLoan() {
     <section id="preapproved" class="py-12 sm:py-16 bg-wf-bg border-b border-wf-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="rounded-3xl bg-white border-2 border-wf-border p-6 sm:p-8 shadow-md text-wf-text space-y-6">
+        <div class="rounded-3xl bg-white border-2 border-wf-border p-6 sm:p-10 shadow-md text-wf-text">
           
-          <!-- Section Header -->
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-wf-border pb-4">
-            <div class="space-y-1 text-left">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-bold uppercase tracking-wider">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-700"></i>
-                <span>Festive Exclusive</span>
-              </div>
-              <h2 class="font-outfit text-2xl sm:text-3xl font-extrabold text-wf-dark tracking-tight">
-                Exclusive Pre-Approved <span class="text-wf-subtext">Loan Offer</span>
-              </h2>
-            </div>
-
-            <div class="px-4 py-2 rounded-2xl bg-wf-muted border border-wf-border text-center flex-shrink-0">
-              <span class="text-[10px] text-wf-subtext font-bold uppercase tracking-wider block">Pre-Approved Amount</span>
-              <strong class="font-outfit font-black text-xl sm:text-2xl text-wf-dark">₹ 15,00,000</strong>
-            </div>
-          </div>
-
-          <!-- Single-Line Form Layout: Full Name - Contact Mobile - Request Callback Button -->
-          <form id="preapproved-callback-form" class="space-y-4 pt-1">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div class="p-3 rounded-xl bg-wf-muted border border-wf-border text-xs text-wf-dark flex items-center gap-2 text-left">
-              <i data-lucide="phone-call" class="w-4 h-4 text-wf-dark flex-shrink-0"></i>
-              <span>Our 24/7 dedicated loan desk team will call you within 15 minutes of requesting callback!</span>
-            </div>
-
-            <!-- Single Row Grid (1 Line for Desktop/Tablet) -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
+            <!-- Left Side: Offer Headlines & Details (Exact Match of Reference Wireframe Image) -->
+            <div class="lg:col-span-7 space-y-4 text-left">
               
-              <!-- Field 1: Full Name -->
-              <div class="md:col-span-4 space-y-1 text-left">
-                <label class="block text-xs font-bold uppercase text-wf-dark">Full Name</label>
-                <input 
-                  type="text" 
-                  id="preapp-name-input" 
-                  required 
-                  placeholder="e.g. Rajesh Kumar" 
-                  value="${userName}" 
-                  class="w-full p-3 rounded-xl border border-wf-border font-semibold text-sm focus:border-wf-dark outline-none bg-wf-bg"
-                />
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-wf-muted border border-wf-border text-wf-dark text-xs font-bold uppercase tracking-wider">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-wf-dark"></i>
+                <span>EXCLUSIVE PRE-APPROVED OFFER</span>
               </div>
 
-              <!-- Field 2: Contact Mobile Number -->
-              <div class="md:col-span-4 space-y-1 text-left">
-                <label class="block text-xs font-bold uppercase text-wf-dark">Contact Mobile Number</label>
-                <div class="relative flex items-center">
-                  <span class="absolute left-3.5 text-xs font-bold text-wf-subtext">+91</span>
-                  <input 
-                    type="tel" 
-                    id="preapp-mobile-input" 
-                    required 
-                    maxlength="10" 
-                    placeholder="98765 43210" 
-                    value="${userMobile || '9876543210'}" 
-                    class="w-full pl-14 pr-3 p-3 rounded-xl border border-wf-border font-mono text-sm font-semibold text-wf-dark outline-none focus:border-wf-dark bg-wf-bg"
-                  />
-                </div>
+              <h2 class="font-outfit text-3xl sm:text-4xl md:text-5xl font-extrabold text-wf-dark tracking-tight leading-tight">
+                Pre-approved Loan <span class="text-wf-subtext">Just for You</span>
+              </h2>
+
+              <div class="flex items-baseline gap-3 pt-1">
+                <span class="font-outfit font-black text-4xl sm:text-5xl lg:text-6xl text-wf-dark tracking-tight">
+                  ₹ 15 Lakh
+                </span>
+                <span class="text-base sm:text-xl font-bold text-wf-subtext">
+                  @ 10.99% <span class="text-xs font-normal">p.a.</span>
+                </span>
               </div>
 
-              <!-- Button 3: Request 24/7 Instant Callback -->
-              <div class="md:col-span-4">
-                <button 
-                  type="submit"
-                  class="w-full py-3.5 px-4 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs active:scale-98 transition-all whitespace-nowrap"
-                >
-                  <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
-                  <span>Request 24/7 Instant Callback</span>
-                </button>
+              <p class="text-wf-subtext text-xs sm:text-sm md:text-base font-normal leading-relaxed max-w-xl">
+                Congratulations! Based on your credit history, you are pre-approved for instant disbursal with zero physical documentation required.
+              </p>
+
+              <div class="pt-2 flex items-center gap-2 text-xs font-semibold text-emerald-700">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                <span>Zero processing fee waiver applied for festive season.</span>
               </div>
 
             </div>
 
-          </form>
+            <!-- Right Side: Form Stacked Vertically (One Below the Other on Right Side) -->
+            <div class="lg:col-span-5">
+              
+              <div class="rounded-2xl bg-wf-muted border-2 border-wf-border p-6 shadow-sm space-y-4 text-left">
+                
+                <div>
+                  <h3 class="font-outfit font-bold text-lg text-wf-dark">Request Instant Callback</h3>
+                  <p class="text-xs text-wf-subtext mt-0.5">Our 24/7 dedicated loan desk team will call you within 15 mins.</p>
+                </div>
+
+                <form id="preapproved-callback-form" class="space-y-4">
+                  
+                  <!-- Field 1: Full Name -->
+                  <div class="space-y-1">
+                    <label class="block text-xs font-bold uppercase text-wf-dark">Full Name</label>
+                    <input 
+                      type="text" 
+                      id="preapp-name-input" 
+                      required 
+                      placeholder="e.g. Rajesh Kumar" 
+                      value="${userName}" 
+                      class="w-full p-3 rounded-xl border border-wf-border font-semibold text-sm focus:border-wf-dark outline-none bg-white"
+                    />
+                  </div>
+
+                  <!-- Field 2: Contact Mobile Number -->
+                  <div class="space-y-1">
+                    <label class="block text-xs font-bold uppercase text-wf-dark">Contact Mobile Number</label>
+                    <div class="relative flex items-center">
+                      <span class="absolute left-3.5 text-xs font-bold text-wf-subtext">+91</span>
+                      <input 
+                        type="tel" 
+                        id="preapp-mobile-input" 
+                        required 
+                        maxlength="10" 
+                        placeholder="98765 43210" 
+                        value="${userMobile || '9876543210'}" 
+                        class="w-full pl-14 pr-3 p-3 rounded-xl border border-wf-border font-mono text-sm font-semibold text-wf-dark outline-none focus:border-wf-dark bg-white"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- CTA Button: Request 24/7 Instant Callback -->
+                  <button 
+                    type="submit"
+                    class="w-full py-3.5 px-4 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs active:scale-98 transition-all"
+                  >
+                    <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+                    <span>Request 24/7 Instant Callback</span>
+                  </button>
+
+                </form>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
