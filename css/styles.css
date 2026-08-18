@@ -1,4 +1,27 @@
-/* Minimalist UI Protocol Styles */
+/* Minimalist UI & Master Responsive System Styles */
+
+/* Prevent accidental horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe Area Insets for Modern Mobile Viewports */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
+
+body {
+  padding-top: var(--sat);
+  padding-bottom: var(--sab);
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+}
 
 /* Grid background texture */
 .bg-wireframe-grid {
@@ -19,8 +42,8 @@ input[type=range] {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 6px;
   background: #111111;
   cursor: pointer;
@@ -60,6 +83,12 @@ kbd {
   color: #111111;
 }
 
+/* Touch-Friendly Control Minimum Height (44px Rule) */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
 /* Hide scrollbar helper */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -67,4 +96,10 @@ kbd {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
 }
