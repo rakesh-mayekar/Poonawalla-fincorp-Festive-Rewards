@@ -1,4 +1,4 @@
-// Pre-Approved Loan Section Component - 2 Fields (Full Name & Mobile Number Only)
+// Pre-Approved Loan Section Component - Single Line Horizontal Grid Alignment
 import { store } from '../state.js';
 
 export function renderPreApprovedLoan() {
@@ -9,38 +9,39 @@ export function renderPreApprovedLoan() {
     <section id="preapproved" class="py-12 sm:py-16 bg-wf-bg border-b border-wf-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="rounded-3xl bg-white border-2 border-wf-border p-6 sm:p-10 shadow-md text-wf-text space-y-6">
+        <div class="rounded-3xl bg-white border-2 border-wf-border p-6 sm:p-8 shadow-md text-wf-text space-y-6">
           
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-wf-border pb-6">
-            <div class="space-y-2">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-wf-border pb-4">
+            <div class="space-y-1 text-left">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-bold uppercase tracking-wider">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-700"></i>
                 <span>Festive Exclusive</span>
               </div>
-              <h2 class="font-outfit text-3xl sm:text-4xl font-extrabold text-wf-dark tracking-tight">
+              <h2 class="font-outfit text-2xl sm:text-3xl font-extrabold text-wf-dark tracking-tight">
                 Exclusive Pre-Approved <span class="text-wf-subtext">Loan Offer</span>
               </h2>
-              <p class="text-wf-subtext text-xs sm:text-sm">
-                Get up to ₹15,00,000 sanctioned instantly with zero processing fees.
-              </p>
             </div>
 
-            <div class="px-5 py-3 rounded-2xl bg-wf-muted border border-wf-border text-center">
-              <div class="text-[10px] text-wf-subtext font-bold uppercase tracking-wider">Approved Amount</div>
-              <div class="font-outfit font-black text-2xl sm:text-3xl text-wf-dark">₹ 15,00,000</div>
+            <div class="px-4 py-2 rounded-2xl bg-wf-muted border border-wf-border text-center flex-shrink-0">
+              <span class="text-[10px] text-wf-subtext font-bold uppercase tracking-wider block">Pre-Approved Amount</span>
+              <strong class="font-outfit font-black text-xl sm:text-2xl text-wf-dark">₹ 15,00,000</strong>
             </div>
           </div>
 
-          <!-- 2-Field Callback Request Form (Name & Contact Mobile Only as requested) -->
-          <form id="preapproved-callback-form" class="space-y-4 max-w-2xl mx-auto text-left pt-2">
+          <!-- Single-Line Form Layout: Full Name - Contact Mobile - Request Callback Button -->
+          <form id="preapproved-callback-form" class="space-y-4 pt-1">
             
-            <div class="p-3.5 rounded-xl bg-wf-muted border border-wf-border text-xs text-wf-dark flex items-center gap-2">
+            <div class="p-3 rounded-xl bg-wf-muted border border-wf-border text-xs text-wf-dark flex items-center gap-2 text-left">
               <i data-lucide="phone-call" class="w-4 h-4 text-wf-dark flex-shrink-0"></i>
-              <span>Enter your details below and our 24/7 dedicated loan desk team will contact you within 15 minutes!</span>
+              <span>Our 24/7 dedicated loan desk team will call you within 15 minutes of requesting callback!</span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="space-y-1">
+            <!-- Single Row Grid (1 Line for Desktop/Tablet) -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
+              
+              <!-- Field 1: Full Name -->
+              <div class="md:col-span-4 space-y-1 text-left">
                 <label class="block text-xs font-bold uppercase text-wf-dark">Full Name</label>
                 <input 
                   type="text" 
@@ -52,7 +53,8 @@ export function renderPreApprovedLoan() {
                 />
               </div>
 
-              <div class="space-y-1">
+              <!-- Field 2: Contact Mobile Number -->
+              <div class="md:col-span-4 space-y-1 text-left">
                 <label class="block text-xs font-bold uppercase text-wf-dark">Contact Mobile Number</label>
                 <div class="relative flex items-center">
                   <span class="absolute left-3.5 text-xs font-bold text-wf-subtext">+91</span>
@@ -67,15 +69,19 @@ export function renderPreApprovedLoan() {
                   />
                 </div>
               </div>
-            </div>
 
-            <button 
-              type="submit"
-              class="w-full py-3.5 px-6 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-xs active:scale-98 transition-all"
-            >
-              <i data-lucide="shield-check" class="w-5 h-5 text-white"></i>
-              <span>Request 24/7 Instant Callback</span>
-            </button>
+              <!-- Button 3: Request 24/7 Instant Callback -->
+              <div class="md:col-span-4">
+                <button 
+                  type="submit"
+                  class="w-full py-3.5 px-4 rounded-xl bg-wf-dark hover:bg-wf-darkHover text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs active:scale-98 transition-all whitespace-nowrap"
+                >
+                  <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+                  <span>Request 24/7 Instant Callback</span>
+                </button>
+              </div>
+
+            </div>
 
           </form>
 
