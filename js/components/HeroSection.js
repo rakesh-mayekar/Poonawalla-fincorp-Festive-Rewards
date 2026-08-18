@@ -1,4 +1,4 @@
-// Master Hero Section Component with Enlarged Right Card & Zero Empty Gap
+// Master Hero Section Component with Exactly 4-Digit OTP Grid
 import { store } from '../state.js';
 
 export function renderHeroSection() {
@@ -113,7 +113,7 @@ export function renderHeroSection() {
               </div>
 
               ${step === 1 ? `
-                <!-- Step 1: Sliders Form (Amount, Interest Rate, Tenure) - Enlarged Spacing -->
+                <!-- Step 1: Sliders Form (Amount, Interest Rate, Tenure) -->
                 <div class="space-y-4 flex-1 flex flex-col justify-between py-1">
                   
                   <!-- Slider 1: Loan Amount -->
@@ -266,14 +266,13 @@ export function renderHeroSection() {
                       </div>
                     </div>
 
-                    <!-- OTP Input Box -->
+                    <!-- Exactly 4 OTP Input Boxes -->
                     <div class="space-y-1 ${otpSent ? 'opacity-100' : 'opacity-50 pointer-events-none'} transition-opacity">
                       <div class="flex justify-between items-center">
                         <label class="block text-[11px] font-bold uppercase text-wf-dark">Enter 4-Digit OTP</label>
                         <span class="text-[10px] font-bold text-emerald-700">${otpSent ? 'Auto-filled (1234)' : 'Click Send OTP'}</span>
                       </div>
                       <div class="grid grid-cols-4 gap-2">
-                        <input type="text" value="${otpSent ? '1' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
                         <input type="text" value="${otpSent ? '1' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
                         <input type="text" value="${otpSent ? '2' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
                         <input type="text" value="${otpSent ? '3' : ''}" readonly class="py-2 rounded-lg bg-wf-muted border border-wf-border font-mono text-sm font-bold text-center text-wf-dark" />
@@ -309,7 +308,7 @@ export function renderHeroSection() {
 
       </div>
 
-      <!-- BOTTOM BANNER DIYA TICKER (Directly attached to bottom border) -->
+      <!-- BOTTOM BANNER DIYA TICKER -->
       <div class="w-full bg-white border-t-2 border-wf-border py-3 px-4 shadow-xs relative z-20 flex-shrink-0">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-3 text-center sm:text-left">
           
